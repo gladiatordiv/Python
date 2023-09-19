@@ -8,6 +8,12 @@ class Employee:
         return '{} {}'.format(self.first,self.last)
     def apply_raise(self):
         self.pay=int(self.pay * self.raise_amount)
+    
+    def __repr__(self) :
+        return "Employee('{}','{}',{})".format(self.first,self.last,self.pay)
+    
+    def __str__(self) :
+        return '{}-{}'.format(self.full_name(),self.pay)
 
 class developer(Employee):
     raise_amt=1.10
@@ -37,3 +43,5 @@ class Manager(Employee):
 # print(mgr_1.first)
 # mgr_1.add_emp(dev_2)
 # mgr_1.print_emps()
+emp_1=Employee('divya','chauhan',50000)
+print(emp_1)
