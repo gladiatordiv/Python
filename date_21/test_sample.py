@@ -1,4 +1,3 @@
-import pytest
 from sample import reverse_string  
 def test_reverse_string():
     s = list("Divya Chauhan") 
